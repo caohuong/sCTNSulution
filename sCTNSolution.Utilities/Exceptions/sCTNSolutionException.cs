@@ -4,7 +4,7 @@ using System.Text;
 
 namespace sCTNSolution.Utilities.Exceptions
 {
-    class sCTNSolutionException : Exception
+    public class sCTNSolutionException : Exception
     {
         public sCTNSolutionException()
         {
