@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace sCTNSolution.Application.Catalog.Hoadon
+namespace sCTNSolution.ViewModels
 {
     class Class1
     {

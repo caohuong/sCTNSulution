@@ -1,9 +1,10 @@
-﻿using sCTNSolution.Application.Dtos;
+﻿
+using sCTNSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace sCTNSolution.Application.Catalog.Hoadon.Dtos
+namespace sCTNSolution.ViewModels.Catalog.Hoadon
 {
     public class GetHoaDonPagingRepuest: PagingRequestBase
     {

@@ -1,6 +1,7 @@
 ﻿
-using sCTNSolution.Application.Catalog.Hoadon.Dtos;
-using sCTNSolution.Application.Dtos;
+
+using sCTNSolution.ViewModels.Catalog.Hoadon;
+using sCTNSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
