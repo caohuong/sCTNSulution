@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sCTNSolution.Data", "sCTNSo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sCTNSolution.Application", "sCTNSolution.Application\sCTNSolution.Application.csproj", "{B6B29255-22B2-415D-A8AC-89F95D5D0660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sCTNSolution.Utilities", "sCTNSolution.Utilities\sCTNSolution.Utilities.csproj", "{F7854585-0E74-466D-9BED-567034A7F633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sCTNSolution.Utilities", "sCTNSolution.Utilities\sCTNSolution.Utilities.csproj", "{F7854585-0E74-466D-9BED-567034A7F633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sCTNSolution.ViewModels", "sCTNSolution.ViewModels\sCTNSolution.ViewModels.csproj", "{7ACC588C-8D8B-4706-8DC8-61C025600756}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{F7854585-0E74-466D-9BED-567034A7F633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7854585-0E74-466D-9BED-567034A7F633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7854585-0E74-466D-9BED-567034A7F633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACC588C-8D8B-4706-8DC8-61C025600756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACC588C-8D8B-4706-8DC8-61C025600756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACC588C-8D8B-4706-8DC8-61C025600756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACC588C-8D8B-4706-8DC8-61C025600756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

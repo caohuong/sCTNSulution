@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using sCTNSolution.Data.Entities;
-namespace sCTNSolution.Application.Catalog.Hoadon.Dtos
+namespace sCTNSolution.ViewModels.Catalog.Hoadon
 {
     public class HoaDonViewModel: HoaDon
     {

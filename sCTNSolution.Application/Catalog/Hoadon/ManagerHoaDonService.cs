@@ -1,5 +1,4 @@
-﻿using sCTNSolution.Application.Catalog.Hoadon.Dtos;
-using sCTNSolution.Application.Dtos;
+﻿
 using sCTNSolution.Data.EF;
 using System;
 using System.Collections.Generic;
@@ -7,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using sCTNSolution.ViewModels.Common;
+using sCTNSolution.ViewModels.Catalog.Hoadon;
 
 namespace sCTNSolution.Application.Catalog.Hoadon
 {
