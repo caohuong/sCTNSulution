@@ -22,8 +22,8 @@ namespace sCTNSolution.ViewModels.Catalog.Hoadon
         public string To_KH { get; set; }
         public string Ap_KH { get; set; }
         public string Xa_Phuong { get; set; }
-        public Nullable<System.DateTime> Ky_Tinh_TuNgay { get; set; }
-        public Nullable<System.DateTime> Ky_Tinh_DenNgay { get; set; }
+        public Nullable<DateTime> Ky_Tinh_TuNgay { get; set; }
+        public Nullable<DateTime> Ky_Tinh_DenNgay { get; set; }
 
         public Nullable<double> TT_DM10 => Dm10 > 0 ? Math.Round((Convert.ToDouble(Dm10) * Don_Gia_DM10).Value, 0, MidpointRounding.AwayFromZero) : 0;
         public Nullable<double> TT_DM20 => Dm20 > 0 ? Math.Round((Convert.ToDouble(Dm20) * Don_Gia_DM20).Value, 0, MidpointRounding.AwayFromZero) : 0;

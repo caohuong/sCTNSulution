@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using sCTNSolution.Data.Entities;
 
 namespace sCTNSolution.Data.EF
 {
-    public partial class CTNKGContext : DbContext
+    public partial class CTNKGContext : IdentityDbContext<AppUser,AppRole,Guid>
     {
         public CTNKGContext()
         {
