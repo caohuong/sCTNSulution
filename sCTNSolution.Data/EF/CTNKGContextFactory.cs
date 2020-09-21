@@ -14,7 +14,7 @@ namespace sCTNSolution.Data.EF
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
-            var connectionBuilder = configuration.GetConnectionString("CTNKGDatabase");
+            var connectionBuilder = configuration.GetConnectionString("sCTNSolutionDb");
             var optionsBuilder = new DbContextOptionsBuilder<CTNKGContext>();
             optionsBuilder.UseSqlServer(connectionBuilder);
 
