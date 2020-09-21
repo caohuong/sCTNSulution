@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using sCTNSolution.Data.Entities;
@@ -2000,6 +2001,63 @@ namespace sCTNSolution.Data.EF
                     .HasMaxLength(250);
             });
 
+            modelBuilder.Entity<AppUser>(entity =>
+            {
+                entity.ToTable("AppUsers");
+                entity.Property(e => e.FirstName)
+                    .HasColumnName("FirstName")
+                    .HasMaxLength(200).IsRequired();
+
+                entity.Property(e => e.LastName)
+                    .HasColumnName("LastName")
+                    .HasMaxLength(200).IsRequired();
+
+                entity.Property(e => e.Dob)
+                    .HasColumnName("Dob")
+                    .HasColumnType("datetime").IsRequired();
+            });
+
+            modelBuilder.Entity<AppRole>(entity =>
+            {
+                entity.ToTable("AppRoles");
+                entity.Property(e => e.Description)
+                    .HasColumnName("Description")
+                    .HasMaxLength(200).IsRequired();
+            });
+            modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x=> new { x.UserId,x.RoleId});
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x=>x.UserId);
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x=>x.UserId);
+
+            //Create Seeding data
+            var roleId = new Guid("C8AF3DFF-8F86-4423-8D8E-B058AD31BC9A");
+            var adminId = new Guid("8082AD02-677A-46AE-954A-A223E8B8CF10");
+            modelBuilder.Entity<AppRole>().HasData(new AppRole{ 
+                Id = roleId,
+                Name="admin",
+                NormalizedName="admin",
+                Description="Adminstrator role"
+            });
+            var hasher = new PasswordHasher<AppUser>();
+            modelBuilder.Entity<AppUser>().HasData(new AppUser {
+                Id=adminId,
+                UserName = "ctn.admin",
+                NormalizedUserName = "admin",
+                Email="s_h22002@yahoo.com",
+                NormalizedEmail= "s_h22002@yahoo.com",
+                EmailConfirmed=true,
+                PasswordHash= hasher.HashPassword(null,"ctnkgadmin@123"),
+                SecurityStamp=string.Empty,
+                FirstName="Cao",
+                LastName="Huong",
+                Dob=new DateTime(1988,10,03)
+            });
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
+            {
+                RoleId=roleId,
+                UserId=adminId
+            });
             OnModelCreatingPartial(modelBuilder);
         }
 

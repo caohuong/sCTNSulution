@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using sCTNSolution.Data.EF;
 
 namespace sCTNSolution.Data.Migrations
 {
     [DbContext(typeof(CTNKGContext))]
-    partial class CTNKGContextModelSnapshot : ModelSnapshot
+    [Migration("20200921043753_AspNetCoreIdentityDatabase")]
+    partial class AspNetCoreIdentityDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -92,13 +94,6 @@ namespace sCTNSolution.Data.Migrations
                     b.HasKey("UserId", "RoleId");
 
                     b.ToTable("AppUserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = new Guid("8082ad02-677a-46ae-954a-a223e8b8cf10"),
-                            RoleId = new Guid("c8af3dff-8f86-4423-8d8e-b058ad31bc9a")
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
@@ -145,16 +140,6 @@ namespace sCTNSolution.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("c8af3dff-8f86-4423-8d8e-b058ad31bc9a"),
-                            ConcurrencyStamp = "49cd304d-481a-435f-899f-a4d6c2cbb40d",
-                            Description = "Adminstrator role",
-                            Name = "admin",
-                            NormalizedName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("sCTNSolution.Data.Entities.AppUser", b =>
@@ -224,27 +209,6 @@ namespace sCTNSolution.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("8082ad02-677a-46ae-954a-a223e8b8cf10"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "a1548fca-512b-4314-9a99-fe37c9e7ae49",
-                            Dob = new DateTime(1988, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "s_h22002@yahoo.com",
-                            EmailConfirmed = true,
-                            FirstName = "Cao",
-                            LastName = "Huong",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "s_h22002@yahoo.com",
-                            NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKWJnnYg3l/S/eMAkXSlIXjt8LXK3965PGb2Zseaglf1dtgt3B+6k9mEUkQHBntitQ==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "",
-                            TwoFactorEnabled = false,
-                            UserName = "ctn.admin"
-                        });
                 });
 
             modelBuilder.Entity("sCTNSolution.Data.Entities.BangGiaNuoc", b =>
