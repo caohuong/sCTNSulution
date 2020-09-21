@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\sCTNSolution.Data\sCTNSolution.Data.csproj" />
     <ProjectReference Include="..\sCTNSolution.Utilities\sCTNSolution.Utilities.csproj" />
     <ProjectReference Include="..\sCTNSolution.ViewModels\sCTNSolution.ViewModels.csproj" />

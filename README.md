@@ -12,5 +12,6 @@
 - Microsoft.EntityFrameworkCore 3.1.8
 ### BackenaApi
 - Swashbuckle.AspNetCore 5.6.1
+
 ## How to configure and run
 ## How to contribute
