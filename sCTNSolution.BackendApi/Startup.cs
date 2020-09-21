@@ -13,7 +13,7 @@ using sCTNSolution.Application.Catalog.Hoadon;
 using sCTNSolution.Application.Catalog.TramNuoc;
 using sCTNSolution.Data.EF;
 using sCTNSolution.Utilities.Constants;
-
+using Microsoft.OpenApi.Models;
 namespace sCTNSolution.BackendApi
 {
     public class Startup
@@ -36,6 +36,11 @@ namespace sCTNSolution.BackendApi
             services.AddTransient<IManageTramNuocService, ManageTramNuocService>();
 
             services.AddControllersWithViews();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CTNKG API test", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +63,11 @@ namespace sCTNSolution.BackendApi
 
             app.UseAuthorization();
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger test CTNKG V1");
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
