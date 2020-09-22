@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sCTNSolution.Utilities", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sCTNSolution.ViewModels", "sCTNSolution.ViewModels\sCTNSolution.ViewModels.csproj", "{7ACC588C-8D8B-4706-8DC8-61C025600756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sCTNSolution.BackendApi", "sCTNSolution.BackendApi\sCTNSolution.BackendApi.csproj", "{FEA889E7-9E3F-4BDA-A546-59D010D7BC49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sCTNSolution.BackendApi", "sCTNSolution.BackendApi\sCTNSolution.BackendApi.csproj", "{FEA889E7-9E3F-4BDA-A546-59D010D7BC49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sCTNSolution.AppTest", "sCTNSolution.AppTest\sCTNSolution.AppTest.csproj", "{A8919245-8FDC-447D-B97A-24ECF1FE11CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{FEA889E7-9E3F-4BDA-A546-59D010D7BC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA889E7-9E3F-4BDA-A546-59D010D7BC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA889E7-9E3F-4BDA-A546-59D010D7BC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8919245-8FDC-447D-B97A-24ECF1FE11CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8919245-8FDC-447D-B97A-24ECF1FE11CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8919245-8FDC-447D-B97A-24ECF1FE11CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8919245-8FDC-447D-B97A-24ECF1FE11CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

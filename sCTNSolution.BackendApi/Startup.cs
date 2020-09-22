@@ -19,6 +19,7 @@ using sCTNSolution.Data.Entities;
 using sCTNSolution.Application.System.Users;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using sCTNSolution.Application.Catalog.KyHoaDon;
 
 namespace sCTNSolution.BackendApi
 {
@@ -44,6 +45,7 @@ namespace sCTNSolution.BackendApi
             //Declare DI khoi tao dich vu neu khong thi error : Unable to resolve service for type interface
             services.AddTransient<IManagerHoaDonService, ManagerHoaDonService>();
             services.AddTransient<IManageTramNuocService, ManageTramNuocService>();
+            services.AddTransient<IKyHoaDonService, KyHoaDonService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<UserManager<AppUser>,UserManager<AppUser>>();
             services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();

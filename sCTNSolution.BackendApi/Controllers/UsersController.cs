@@ -21,7 +21,7 @@ namespace sCTNSolution.BackendApi.Controllers
         }
         [HttpPost("authenticate")]
         [AllowAnonymous]
-        public async Task<IActionResult> Authenticate([FromForm]LoginRequest request)
+        public async Task<IActionResult> Authenticate([FromBody]LoginRequest request)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var resultToken = await _userService.Authencate(request);
@@ -29,11 +29,12 @@ namespace sCTNSolution.BackendApi.Controllers
             {
                 return BadRequest("UserName or password is in corret");
             }
+            
             return Ok(resultToken);
         }
         [HttpPost("register")]
         [AllowAnonymous]
-        public async Task<IActionResult> Register([FromForm] RegisterRequest request)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest request)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = await _userService.Register(request);
