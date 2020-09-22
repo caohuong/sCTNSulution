@@ -79,7 +79,7 @@ namespace sCTNSolution.Application.Catalog.Hoadon
                                        Xa_Phuong = x.TenXaPhuong,
                                        Ky_Tinh_TuNgay = kt.DenNgay,
                                        Ky_Tinh_DenNgay = kt.TuNgay,
-                                   }).Take(2).ToListAsync();
+                                   }).ToListAsync();
                 var totalcount = query.Count();
                 var result = new PagedHoaDonByKyResult<HoaDonViewModel>()
                 {
@@ -271,7 +271,7 @@ namespace sCTNSolution.Application.Catalog.Hoadon
                             Xa_Phuong = x.TenXaPhuong,
                             Ky_Tinh_TuNgay = kt.DenNgay,
                             Ky_Tinh_DenNgay = kt.TuNgay,
-                        }).Take(3).ToListAsync();
+                        }).ToListAsync();
             var totalcount = query.Count();
             var result = new PagedHoaDonByKyResult<HoaDonViewModel>()
             {
